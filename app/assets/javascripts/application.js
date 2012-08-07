@@ -16,8 +16,10 @@
 //= require ember-latest
 //= require ember-data-latest
 //= require wookmark.jquery
+//= require chosen.jquery.min
 //= require data
 //= require_self
 //= require watchd
+Ember.LOG_BINDINGS = true;
 Watchd = Ember.Application.create();
 //= require_tree .

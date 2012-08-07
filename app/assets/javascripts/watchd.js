@@ -13,6 +13,5 @@
 
 $(function() {
   Watchd.initialize();
-	$('#tiles li').wookmark({ autoResize: true, offset: 8 });
 });
 

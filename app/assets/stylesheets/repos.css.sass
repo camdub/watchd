@@ -1,0 +1,35 @@
+#tiles
+  list-style-type: none
+  margin: 0
+  position: relative
+
+  li
+    width: 200px
+    background-color: #fff
+    +border-radius(2px)
+    padding: 4px
+    display: inline-block
+    +box-shadow(0.75px 0.75px 1px rgba(0, 0, 0, 0.3))
+
+    p.updated
+      color: #999
+      margin-top: -5px
+      font-size: 11px
+
+    p
+      color: #666
+      font-size: 12px
+      margin: 7px 0 0 7px
+
+    &::after
+      content: ''
+      position: absolute
+      right: 0
+      top: 0
+      width: 0
+      height: 0
+      border-bottom: 20px solid transparent
+      border-left: 20px solid transparent
+      border-right: 20px solid #0080B0
+      pointer-events: none
+      border-right-color: #7AC9DE

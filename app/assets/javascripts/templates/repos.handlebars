@@ -1,11 +1,17 @@
-<h1>Repos</h1>
+<div class="container top-section">
+  {{view Watchd.ChosenSelect
+    contentBinding="Watchd.ReposFilterController.content"
+    valueBinding="Watchd.ReposFilterController.selected"}}
+</div>
 
-<ul id="tiles">
-  {{#each repo in content}}
-    <li>
-      <p><a href="#">{{repo.name}}</a> {{repo.language}}</p>
-      <p class="updated">updated {{updated}}</p>
-      <p>{{repo.desc}}</p>
-    </li>
-  {{/each}}
-</ul>
+<div id="repos-container">
+  <ul id="tiles">
+    {{#each repo in content}}
+      <li>
+        <p><a href="#">{{repo.name}}</a> {{repo.language}}</p>
+        <p class="updated">updated {{updated}}</p>
+        <p>{{repo.desc}}</p>
+      </li>
+    {{/each}}
+  </ul>
+</div>
