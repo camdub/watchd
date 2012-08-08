@@ -1,4 +1,5 @@
 Watchd.ReposController = Ember.ArrayController.extend({
+
   // Implement your controller here.
   init: function() {
     this._super();

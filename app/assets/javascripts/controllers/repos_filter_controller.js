@@ -3,6 +3,7 @@ Watchd.ReposFilterController = Em.ArrayController.extend({
   content: ['', 'cam', 'zack'],
 
   init: function() {
+    this._super();
     this.set('content', Ember.A(['cam']));
   }
 });
