@@ -1,9 +1,10 @@
 Watchd.UnboundSelectOption = Ember.SelectOption.extend({
-    template: Ember.Handlebars.compile('{{unbound label}}')
+    template: Ember.Handlebars.compile('{{unbound view.label}}')
 });
 
 Watchd.ChosenSelect = Ember.Select.extend({
     chosenOptions: {},
+    prompt: 'hey',
 
     change: function(event) {
         Em.run.once(this, this._updateElementValue);
@@ -13,8 +14,7 @@ Watchd.ChosenSelect = Ember.Select.extend({
         this.set('value', this.$().attr('value'));
     },
 
-
-    template: Ember.Handlebars.compile('{{#if prompt}}{{unbound prompt}}{{/if}}' + '{{#each content}}{{view Watchd.UnboundSelectOption contentBinding="this"}}{{/each}}'),
+    template: Ember.Handlebars.compile('{{#if prompt}}{{unbound prompt}}{{/if}}' + '{{#each view.content}}{{view Watchd.UnboundSelectOption contentBinding="this"}}{{/each}}'),
 
     didInsertElement: function() {
         this._super();

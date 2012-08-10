@@ -14,9 +14,9 @@ Watchd.ReposController = Ember.ArrayController.extend({
         updated: new Date(item.updated_at),
         language: item.language
       });
-      items.push(repo);
+      items.pushObject(repo);
     });
-    this.set('content', Ember.A(items));
+    this.set('content', items);
 
     console.profileEnd();
   }
